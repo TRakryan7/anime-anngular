@@ -9,9 +9,9 @@ export class AnimeCardComponent implements OnChanges{
   constructor(){};
 
   @Input() api? : any[] = [];
-  @Input() title! :string;
-  @Input() linkTitle = '';
-  @Input() linkHref = '';
+  @Input() title? :string;
+  @Input() linkTitle?:string;
+  @Input() linkHref?:string;
 
   ngOnChanges(): void {
       console.log(this.api);
