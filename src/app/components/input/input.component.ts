@@ -15,7 +15,6 @@ export class InputComponent {
   constructor(private router: Router){}
 
   onSearch(event:any){
-    console.log(event.key);
     this.keyword = event.target.value;
     if(!this.keyword || this.keyword.trim()=="") return
 

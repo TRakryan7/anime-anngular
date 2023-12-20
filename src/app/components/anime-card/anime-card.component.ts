@@ -14,7 +14,6 @@ export class AnimeCardComponent implements OnChanges{
   @Input() linkHref?:string;
 
   ngOnChanges(): void {
-      console.log(this.api);
   }
   
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit,OnChanges, DoCheck, AfterContentChecked } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router'
+import { ActivatedRoute, ParamMap, Router } from '@angular/router'
 import { ApiService } from '../../shared/services/api.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit	{
 
   constructor(
     private route: ActivatedRoute,
+    private router:Router,
     private apiService: ApiService,){
 
     }
@@ -21,9 +22,8 @@ export class SearchComponent implements OnInit	{
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.keyword = params.get('keyword') || '';
+      this.getDataAnime(this.keyword);
     })
-    console.log(this.keyword);
-    this.getDataAnime(this.keyword);
   }
 
 
@@ -31,8 +31,7 @@ export class SearchComponent implements OnInit	{
     this.apiService.getDataApi(`/anime?q=${this.keyword}`,).subscribe(
       (res)=>{
         this.api = res.data;
-
-        console.log(this.api);
+        // console.log(this.api);
       }
     )
   }
