@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { PopulerComponent } from './pages/populer/populer.component';
+import { AnimeComponent } from './pages/anime/anime.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PopulerComponent } from './pages/populer/populer.component';
     HomeComponent,
     SearchComponent,
     PopulerComponent,
+    AnimeComponent,
   ],
   imports: [
     BrowserModule,

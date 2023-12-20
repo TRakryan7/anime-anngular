@@ -14,7 +14,6 @@ export class SearchComponent implements OnInit	{
 
   constructor(
     private route: ActivatedRoute,
-    private router:Router,
     private apiService: ApiService,){
 
     }
@@ -31,7 +30,6 @@ export class SearchComponent implements OnInit	{
     this.apiService.getDataApi(`/anime?q=${this.keyword}`,).subscribe(
       (res)=>{
         this.api = res.data;
-        // console.log(this.api);
       }
     )
   }

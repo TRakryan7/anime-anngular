@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
+import { AnimeComponent } from './pages/anime/anime.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path:'search/:keyword',
     component:SearchComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'anime/:id',
+    component:AnimeComponent,
     pathMatch:'full'
   },
 ];
