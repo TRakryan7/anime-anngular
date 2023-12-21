@@ -11,6 +11,7 @@ export class SearchComponent implements OnInit	{
 
   keyword!:string;
   api!:any[];
+  title!:string;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +22,7 @@ export class SearchComponent implements OnInit	{
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.keyword = params.get('keyword') || '';
+      this.title = `Pencarian untuk ${decodeURI(this.keyword)}`;
       this.getDataAnime(this.keyword);
     })
   }
