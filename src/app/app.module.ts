@@ -28,7 +28,7 @@ import { AnimeComponent } from './pages/anime/anime.component';
     MatIconModule,
     ComponentsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
