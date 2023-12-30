@@ -10,6 +10,7 @@ import { ApiService } from '../../shared/services/api.service';
 export class AnimeComponent implements OnInit {
   response!:any;
   id!:string;
+  animeId!:string;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,7 +30,8 @@ export class AnimeComponent implements OnInit {
     this.apiService.getDataApi(`/anime/${param}`,).subscribe(
       (res)=>{
         this.response = res.data;
-        console.log(this.response);
+        this.animeId = this.response?.trailer.youtube_id; 
+        console.log(this.animeId);
       }
     )
   }

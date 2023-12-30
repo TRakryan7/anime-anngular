@@ -1,1 +1,9 @@
-<p>video-player works!</p>
+<div *ngIf="isOpen" class="fixed bottom-2 right-2">
+    <button (click)="handleOpen()" class="text-primary float-left  bg-secondary px-3 mb-1">X</button>
+    <youtube-player [width]="300" [height]="250" [videoId]="videoId" loadApi="false"></youtube-player>
+</div>
+<div *ngIf="!isOpen" class="fixed bottom-2 right-2">
+    <button (click)="handleOpen()" class="fixed bottom-5 right-5 w-32 bg-primary text-dark hover:bg-accent hover:text-dark rounded">
+        Tonton Trailer
+    </button>
+</div>
