@@ -5,6 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { InputComponent } from './input/input.component';
 import { AnimeCardComponent } from './anime-card/anime-card.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 
@@ -13,6 +14,7 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     InputComponent,
     AnimeCardComponent,
     VideoPlayerComponent,
+    PaginationComponent,
     
   ],
   imports: [
