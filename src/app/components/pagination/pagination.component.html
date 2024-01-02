@@ -1,7 +1,7 @@
 <div class="flex justify-center items-center py-4 px-2 gap-4 text-primary text-2xl">
     <button  class="transition-all hover:text-accent">PREV</button>
     <p>{{page}} of {{lastPage}}</p>
-    <button class="transition-all hover:text-accent">NEXT</button>
+    <button (click)="goToNext()" class="transition-all hover:text-accent">NEXT</button>
 </div>
 
  

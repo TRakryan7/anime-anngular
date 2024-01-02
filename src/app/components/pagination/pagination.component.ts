@@ -29,11 +29,12 @@ export class PaginationComponent implements OnInit, OnChanges{
   })
   }
 
-  goToNext(value:number){
-    
+  goToNext(){
+    // console.log(value);
+    this.handleNext.emit(1)
   }
-  
-  goToPrev(value:number){
 
+  goToPrev(value:number){
+    console.log(value);
   }
 }
