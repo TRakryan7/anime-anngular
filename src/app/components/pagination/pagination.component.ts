@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter  } from '@angular/core';
+import { Component, Output, Input,EventEmitter, OnChanges, OnInit, SimpleChanges  } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,34 @@ import { Component, Output, EventEmitter  } from '@angular/core';
   templateUrl: './pagination.component.html',
   styleUrl: './pagination.component.css'
 })
-export class PaginationComponent {
+export class PaginationComponent implements OnInit, OnChanges{
+  @Input() page!:number;
+  @Input() lastPage!:number;
+  @Output() handleNext = new EventEmitter<number>();
+  @Output() handlePrev = new EventEmitter<number>();
 
 
+  ngOnInit(): void {
+      
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+      
+  }
+
+
+  scrollTop(){
+    scrollTo({
+      behavior:'smooth',
+      top:0
+  })
+  }
+
+  goToNext(value:number){
+    
+  }
+  
+  goToPrev(value:number){
+
+  }
 }

@@ -14,13 +14,13 @@ export class PopulerComponent implements OnInit {
   constructor(private apiService:ApiService){}
 
   ngOnInit(): void {
-      
+      this.getDataAnime();
   }
 
   async getDataAnime(){
-    this.apiService.getDataApi(`top/anime?page=${this.page}`).subscribe(
+    this.apiService.getDataApi(`/top/anime?page=${this.page}`).subscribe(
       (res)=>{
-          this.dataAnime = res.data;
+          this.dataAnime = res;
         }
       )
   }

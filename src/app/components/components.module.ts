@@ -26,6 +26,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     InputComponent,
     AnimeCardComponent,
     VideoPlayerComponent,
+    PaginationComponent
   ]
 })
 export class ComponentsModule { }
