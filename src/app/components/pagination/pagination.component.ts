@@ -30,11 +30,16 @@ export class PaginationComponent implements OnInit, OnChanges{
   }
 
   goToNext(){
-    // console.log(value);
-    this.handleNext.emit(1)
+    if(this.page < this.lastPage){
+      this.handleNext.emit(1);
+      this.scrollTop();
+    }
   }
 
-  goToPrev(value:number){
-    console.log(value);
+  goToPrev(){
+    if(this.page !== 1){
+      this.handlePrev.emit(1);
+      this.scrollTop();
+    }
   }
 }

@@ -1,2 +1,7 @@
-<p>populer works!</p>
-<app-pagination [page]="page" [lastPage]="dataAnime?.pagination?.last_visible_page" (handleNext)="goToNext($event)"></app-pagination>
+<app-anime-card [api]="dataAnime?.data"></app-anime-card>
+<app-pagination 
+    [page]="page" 
+    [lastPage]="dataAnime?.pagination?.last_visible_page" 
+    (handleNext)="goToNext($event)" 
+    (handlePrev)="goToPrev($event)">
+</app-pagination>

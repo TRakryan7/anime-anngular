@@ -15,9 +15,6 @@ export class PopulerComponent implements OnInit,OnChanges {
 
   ngOnInit(): void {
       this.getDataAnime();
-      this.page.subscribe((key:number)=>{
-        this.getDataAnime();
-      });
   }
 
   ngOnChanges(): void {
@@ -25,8 +22,14 @@ export class PopulerComponent implements OnInit,OnChanges {
   }
 
   goToNext(value:number){
-    this.page = this.page + value;
-    console.log(this.page);
+      this.page = this.page + value;
+      this.getDataAnime();
+
+  }
+
+  goToPrev(value:number){
+      this.page = this.page - value;
+      this.getDataAnime();
   }
 
   async getDataAnime(){
