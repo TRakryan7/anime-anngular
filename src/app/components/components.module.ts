@@ -6,6 +6,7 @@ import { InputComponent } from './input/input.component';
 import { AnimeCardComponent } from './anime-card/anime-card.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -15,6 +16,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     AnimeCardComponent,
     VideoPlayerComponent,
     PaginationComponent,
+    SpinnerComponent,
     
   ],
   imports: [
@@ -26,7 +28,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     InputComponent,
     AnimeCardComponent,
     VideoPlayerComponent,
-    PaginationComponent
+    PaginationComponent,
+    SpinnerComponent
   ]
 })
 export class ComponentsModule { }

@@ -13,6 +13,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { PopulerComponent } from './pages/populer/populer.component';
 import { AnimeComponent } from './pages/anime/anime.component';
+import { LoadingInterceptor } from './shared/interceptors/http-header.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,11 @@ import { AnimeComponent } from './pages/anime/anime.component';
     HttpClientModule,
     MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
